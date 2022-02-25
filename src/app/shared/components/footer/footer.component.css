@@ -2,9 +2,11 @@ footer {
   position: absolute;
   bottom: 0;
 
-  height: 10vh;
-
-  background-color: var(--rojo);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1em;
+  background-color: var(--blond);
 }
 
 footer > p > span {
