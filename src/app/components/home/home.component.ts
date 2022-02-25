@@ -12,6 +12,7 @@ interface Language {
 })
 export class HomeComponent {
   public textInput: string;
+
   public language: Language;
 
   public languageList: Language[] = [

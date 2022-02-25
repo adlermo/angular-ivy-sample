@@ -1,0 +1,13 @@
+footer {
+  position: absolute;
+  bottom: 0;
+
+  height: 10vh;
+
+  background-color: var(--rojo);
+}
+
+footer > p > span {
+  color: var(--rojo);
+  font-weight: 800;
+}

@@ -8,7 +8,7 @@ input {
   margin: 0.7em;
 }
 
-p > span {
-  color: var(--rojo);
-  font-weight: 800;
+div {
+  float: right;
+  clear: left;
 }
