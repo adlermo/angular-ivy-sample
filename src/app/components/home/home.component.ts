@@ -20,7 +20,7 @@ export class HomeComponent {
     { quality: 'fácil', name: 'JavaScript' },
     { quality: 'massa', name: 'Java' },
     { quality: 'moda', name: 'Python' },
-    { quality: 'bom', name: 'Ruby' },
+    { quality: 'lindo', name: 'Ruby' },
     { quality: 'old-fashion', name: 'Cobol' },
     { quality: 'coisa séria', name: 'C/C++' },
     { quality: 'desafiador', name: 'Matlab' },
