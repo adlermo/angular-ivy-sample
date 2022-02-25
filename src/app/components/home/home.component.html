@@ -1,11 +1,11 @@
 <section>
-  <h2>Página Home</h2>
+  <h2>Vamos descobrir teu perfil</h2>
 
-  <label for="languages">Escolha uma versão: </label>
+  <label for="languages">Escolha uma linguagem: </label>
   <input
     type="text"
     list="languages"
-    [(ngModel)]="language"
+    [(ngModel)]="textInput"
     (change)="chooseLanguage($event)"
   />
 
@@ -16,7 +16,11 @@
   </datalist>
 
   <p>
-    Aprender {{ !language ? '_____' : language }} é divertido. Eu amo a
-    <span>F1RST!</span>
+    Aprender {{ !language ? '_____' : language.name }} é
+    {{ !language ? '_____' : language.quality }}.
+  </p>
+  <p>
+    Eu amo a
+    <span>F</span><strong>1</strong><span>RST</span>!
   </p>
 </section>

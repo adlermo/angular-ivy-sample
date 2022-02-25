@@ -1,23 +1,28 @@
 import { Component } from '@angular/core';
 
+interface Language {
+  quality: string;
+  name: string;
+}
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  public language: string;
+  public textInput: string;
+  public language: Language;
 
-  public languageList = [
-    { id: 1, name: 'JavaScript' },
-    { id: 2, name: 'Java' },
-    { id: 3, name: 'Python' },
-    { id: 4, name: 'R' },
-    { id: 5, name: 'TypeScript' },
-    { id: 5, name: 'Cobol' },
-    { id: 5, name: 'C/C++' },
-    { id: 5, name: 'Matlab' },
-    { id: 5, name: 'Angular' },
+  public languageList: Language[] = [
+    { quality: 'fácil', name: 'JavaScript' },
+    { quality: 'massa', name: 'Java' },
+    { quality: 'moda', name: 'Python' },
+    { quality: 'bom', name: 'Ruby' },
+    { quality: 'old-fashion', name: 'Cobol' },
+    { quality: 'coisa séria', name: 'C/C++' },
+    { quality: 'desafiador', name: 'Matlab' },
+    { quality: 'divertido', name: 'Angular' },
   ];
 
   constructor() {}
@@ -25,6 +30,6 @@ export class HomeComponent {
   public chooseLanguage(e): void {
     let find = this.languageList.find((x) => x?.name === e.target.value);
 
-    this.language = find.name;
+    this.language = find;
   }
 }
