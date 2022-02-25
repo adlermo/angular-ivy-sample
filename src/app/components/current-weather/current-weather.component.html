@@ -1,5 +1,16 @@
 <section>
-  <p>
-    {{ current.weather[0].main }}
-  </p>
+  <h2>Clima atual em {{ current.name }}:</h2>
+
+  <div class="weather-card">
+    <h2>{{ current.main.temp.toFixed(1) }}° C</h2>
+    <p>{{ current.weather[0].description }}</p>
+
+    <p>Humidade: {{ current.main.humidity.toFixed(1) }}%</p>
+    <p>Máxima: {{ current.main.temp_max.toFixed(1) }}° C</p>
+    <p>Mínima: {{ current.main.temp_min.toFixed(1) }}° C</p>
+  </div>
+
+  <div class="extra-info">
+    <p>Velocidade do vento: {{ current.wind.speed }} Km/h</p>
+  </div>
 </section>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+// Criando um tipo
 interface Language {
   quality: string;
   name: string;

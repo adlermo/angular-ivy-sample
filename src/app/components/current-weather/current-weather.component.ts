@@ -19,4 +19,10 @@ export class CurrentWeatherComponent implements OnInit {
       this.current = { ...res };
     });
   }
+
+  formatTimestamp(timestamp: number): string {
+    let date = new Date(timestamp);
+
+    return date.toLocaleTimeString('pt-BR');
+  }
 }
