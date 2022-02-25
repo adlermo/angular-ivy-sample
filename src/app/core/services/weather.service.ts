@@ -9,7 +9,7 @@ import { Current } from '../../shared/interfaces/current';
   providedIn: 'root',
 })
 export class WeatherService {
-  apiURL =
+  private apiURL =
     'https://api.openweathermap.org/data/2.5/weather?id=5604473&appid=d21dd0e334529048170784d3f77b3f74&units=imperial';
 
   constructor(private readonly http: HttpClient) {}

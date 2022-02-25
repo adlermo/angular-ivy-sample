@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
+import { WeatherService } from './../../core/services/weather.service';
+
+import { Current } from './../../shared/interfaces/current';
 
 @Component({
   selector: 'app-current-weather',
   templateUrl: './current-weather.component.html',
-  styleUrls: ['./current-weather.component.css']
+  styleUrls: ['./current-weather.component.css'],
 })
-export class CurrentWeatherComponent implements OnInit {
+export class CurrentWeatherComponent {
+  current: Current;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private readonly service: WeatherService) {
+    service.getCurrentWeather().subscribe((res) => {
+      this.current = { ...res };
+    });
   }
-
 }
