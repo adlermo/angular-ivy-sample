@@ -1,0 +1,7 @@
+input {
+  padding: 0.3em;
+}
+
+p > span {
+  color: var(--rojo);
+}

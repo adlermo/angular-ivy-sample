@@ -1,1 +1,31 @@
 /* Add application styles & imports to this file! */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Roboto:ital,wght@1,300&display=swap');
+
+:root {
+  --quick-sand: 'Quicksand', sans-serif;
+  --roboto: 'Roboto', sans-serif;
+  --rojo: #d71709;
+  --celadon: #a9e5bb;
+  --blond: #fcf6b1;
+  --yellow: #f7b32b;
+  --dark: #2d1e2f;
+  --sapphire: #255f85;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+label,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--quick-sand);
+}

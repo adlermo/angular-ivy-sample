@@ -1,1 +1,22 @@
-<p>home works!</p>
+<section>
+  <h2>Página Home</h2>
+
+  <label for="languages">Escolha uma versão: </label>
+  <input
+    type="text"
+    list="languages"
+    [(ngModel)]="language"
+    (change)="chooseLanguage($event)"
+  />
+
+  <datalist id="languages">
+    <option *ngFor="let v of languageList" [value]="v.name">
+      {{ v.name }}
+    </option>
+  </datalist>
+
+  <p>
+    Aprender {{ !language ? '_____' : language }} é divertido. Eu amo a
+    <span>F1RST!</span>
+  </p>
+</section>
