@@ -9,8 +9,7 @@ import { Current } from '../../shared/interfaces/current';
   providedIn: 'root',
 })
 export class WeatherService {
-  private apiURL =
-    'https://api.openweathermap.org/data/2.5/weather?id=3448439&appid=d21dd0e334529048170784d3f77b3f74&units=metric&lang=pt_br';
+  private apiURL = 'https://api.openweathermap.org/data/2.5/weather';
 
   // id=2643743   London, GB
   // id=2988507   Paris, FR
@@ -21,7 +20,9 @@ export class WeatherService {
 
   constructor(private readonly http: HttpClient) {}
 
-  getCurrentWeather(): Observable<Current> {
-    return this.http.get<Current>(this.apiURL);
+  getCurrentWeather(city: number = 3448439): Observable<Current> {
+    return this.http.get<Current>(
+      `${this.apiURL}?id=${city}&appid=d21dd0e334529048170784d3f77b3f74&units=metric&lang=pt_br`
+    );
   }
 }
